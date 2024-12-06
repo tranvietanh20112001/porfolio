@@ -6,7 +6,7 @@ const MyProject = () => {
     <>
       <Content
         id="projects"
-        style={{ height: "100vh", backgroundColor: "black" }}
+        style={{ height: "100vh", backgroundColor: "white" }}
       ></Content>
     </>
   );

@@ -9,6 +9,7 @@ const resources = {
       experiment: "Experience",
       projects: "Projects",
       contact: "Contact",
+      full_name: "Tran Viet Anh"
     },
   },
   vn: {
@@ -18,6 +19,7 @@ const resources = {
       experiment: "Kinh nghiệm",
       projects: "Dự án",
       contact: "Liên hệ",
+      full_name: "Trần Việt Anh"
     },
   },
 };

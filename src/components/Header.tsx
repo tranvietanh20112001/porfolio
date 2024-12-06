@@ -1,15 +1,16 @@
 import { Layout, Menu, Typography, Switch } from "antd";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import "../i18n"; // Import the i18n configuration
+import "../i18n";
+import { useMediaQuery } from "react-responsive";
 
 const { Header } = Layout;
-const { Text } = Typography;
+const { Text, Title } = Typography;
 
 const HeaderComponent = () => {
   const { t, i18n } = useTranslation();
   const [language, setLanguage] = useState("en");
-
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
     if (section) {
@@ -49,7 +50,7 @@ const HeaderComponent = () => {
         style={{
           flex: 1,
           minWidth: 0,
-          display: "flex",
+          display: isTabletOrMobile ? "none" : "flex",
           width: "60%",
           margin: "0 20%",
           justifyContent: "space-between",
@@ -71,6 +72,10 @@ const HeaderComponent = () => {
           onChange={handleLanguageSwitch}
         />
       </Menu>
+
+      <Title level={3} style={{ color: "white", margin: "0 auto" }}>
+        Tran Viet Anh
+      </Title>
     </Header>
   );
 };
