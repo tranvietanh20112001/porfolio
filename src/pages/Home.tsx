@@ -1,11 +1,11 @@
-import { Layout, Typography, Image } from "antd";
+import { Layout, Typography } from "antd";
 const { Content } = Layout;
 const { Text } = Typography;
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 import "../i18n";
 
 const Home = () => {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   return (
     <>
